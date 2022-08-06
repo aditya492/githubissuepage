@@ -2,6 +2,13 @@
   text-align: center;
 }
 
+.headerComponents{
+  background-color:#f6f8fa;
+  height:100%;
+  margin:auto;
+  width: 100%;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

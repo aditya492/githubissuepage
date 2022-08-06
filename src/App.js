@@ -1,23 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { Suspense } from "react";
+import Header from './Header'
+import Navbar from './Navbar'
+import MasterData from './MasterData'
+
+// const Header = React.lazy(() => import("./Header"));
+// const Navbar = React.lazy(() => import("./Navbar"));
+// const MasterData = React.lazy(() => import("./MasterData"));
+
 
 function App() {
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='headerComponents'>
+      <Header/>
+      <Navbar/>
+      </div>
+      <MasterData/>
+      
     </div>
   );
 }

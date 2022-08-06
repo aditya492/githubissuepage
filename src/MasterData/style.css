@@ -1,0 +1,71 @@
+.borderBox{
+    border: 1px solid #d0d7de;
+    height: auto;
+    margin: auto;
+    /* width: 80rem; */
+    width: 90%;
+    margin-top: 5rem;
+    border-radius: 11px;
+}
+.tableHeader{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #d0d7de;
+    background: #f6f8fa;
+}
+.iconspan{
+    margin: 0px 7px 0px 0px;
+}
+.iconCircle{
+    color: #1a7f37;
+    margin: 0px 7px 0px 0px
+}
+.tabletitle:hover{
+    color: #0969da;
+}
+.commonContent{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    cursor: pointer;
+    color: #57606a;
+    font-size: 14px;
+    flex-wrap: wrap;
+}
+.arrowdropdown{
+    position: relative;
+    top: 7px;
+}
+
+.commonList{
+    padding: 0px 23px 0px 0px;
+}
+.dataTablecell{
+    display: flex;
+    font-weight: 600;
+    margin: 0px 12px 5px 0px;
+}
+.dataTablecellStatus{
+    display: flex;
+    font-size: 12px;
+    /* margin-top: -1rem; */
+    color:#57606a ;
+    
+}
+
+.masterDivTable{
+    border-bottom: 1px solid #d0d7de;
+    padding: 8px;
+    margin: 0px 0px 0px 11px;
+}
+.masterDivTable:hover{
+    background-color:#f6f8fa ;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+    /* .borderBox{
+        height: auto;
+        width: 62rem
+    } */
+  }

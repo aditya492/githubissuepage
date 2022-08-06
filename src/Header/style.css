@@ -1,0 +1,32 @@
+.masterDiv{
+    display: flex;
+    justify-content: space-between;
+}
+.iconAlign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.toplefthead{
+color: #0969da;
+font-size: 20px;
+}
+.listDiv{
+    display: flex;
+    list-style: none;
+    font-size: 12px;
+    margin: 22px 28px 0px 0px;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+.iconSpanNav{
+    color: #57606a;
+}
+
+.listDesign{
+    border: 1px solid #d0d7de;
+    padding: 6px 16px 6px 16px;
+    margin: 0px 6px;
+    border-radius: 10px;
+    cursor: pointer;
+}

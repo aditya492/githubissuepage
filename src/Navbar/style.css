@@ -1,0 +1,15 @@
+.ulStyle{
+    display: flex;
+    list-style: none;
+    font-size: 14px;
+    padding-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.listStyle{
+    padding: 2px 53px 2px 2px;
+    cursor: pointer;
+}
+.iconSpanNav{
+    color: #57606a;
+}
