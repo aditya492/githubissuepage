@@ -7,23 +7,21 @@ import AdjustOutlinedIcon from "@mui/icons-material/AdjustOutlined";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { Chip } from "@mui/material";
 import { get } from "lodash";
+import { timeCalculation } from "../config";
 
 let page = 1;
 const fetchData = (setData, data) => {
   axios
     .get(`https://api.github.com/repos/facebook/react/issues?page=${page}`)
     .then((res) => {
-        setData([...data, ...res.data]);
-        page = page + 1;
-        console.log("dxxxxx", res.data);
-      
+      setData([...data, ...res.data]);
+      page = page + 1;
+      console.log("dxxxxx", res.data);
     })
     .catch((err) => {
       console.log("Error", err);
     });
 };
-
-
 
 export default function MasterData() {
   const [data, setData] = useState([]);
@@ -46,8 +44,6 @@ export default function MasterData() {
     "Sort",
   ];
 
- 
-
   // Fetching data fron API
   useEffect(() => {
     fetchData(setData, data);
@@ -55,6 +51,17 @@ export default function MasterData() {
 
   const renderData = () => {
     const returnData = data.map((item, index) => {
+      const createdAt = get(item, "created_at", "");
+      
+      const createdDate = new Date(createdAt);
+      const currDate = new Date();
+
+      // getting calculated value from function
+      const { days, hours, ifmorethanmonth } = timeCalculation(
+        createdDate,
+        currDate
+      );
+
       const status = get(item, "labels[0].name", "");
       const title = get(item, "title", "");
       const number = get(item, "number", "");
@@ -89,7 +96,13 @@ export default function MasterData() {
               )}
             </div>
             <div className="dataTablecellStatus">
-              {`#${number} updated  by ${userName}`}
+              {`#${number} updated ${
+                days > 31
+                  ? "on " + ifmorethanmonth
+                  : days
+                  ? days + " days ago"
+                  : hours + " hours ago"
+              }   by ${userName}`}
             </div>
           </div>
         </>
