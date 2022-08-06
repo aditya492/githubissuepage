@@ -16,7 +16,6 @@ const fetchData = (setData, data) => {
     .then((res) => {
       setData([...data, ...res.data]);
       page = page + 1;
-      console.log("dxxxxx", res.data);
     })
     .catch((err) => {
       console.log("Error", err);
